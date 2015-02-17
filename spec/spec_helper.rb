@@ -51,3 +51,9 @@ Spork.each_run do
   # This code will be run each time you run your specs.
 
 end
+
+RSpec.configure do |config|
+  config.before do
+    FactoryGirl.reload
+  end
+end
